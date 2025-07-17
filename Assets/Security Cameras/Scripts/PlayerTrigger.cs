@@ -25,7 +25,7 @@ public class PlayerTrigger : MonoBehaviour
         inTrigger = false;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 750f;
