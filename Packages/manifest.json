@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.dgreenheck.openfracture": "https://github.com/dgreenheck/OpenFracture.git",
     "com.unity.burst": "1.8.12",
     "com.unity.cinemachine": "2.9.7",
     "com.unity.cloud.gltfast": "6.7.1",
