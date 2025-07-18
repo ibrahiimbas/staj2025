@@ -946,7 +946,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   muzzleFlash: {fileID: 1616493363}
-  impactEffect: {fileID: 5809683676877100639, guid: 9f0d3031df8b65c44a7063a69a233fdf, type: 3}
+  impactHole: {fileID: 5809683676877100639, guid: 9f0d3031df8b65c44a7063a69a233fdf, type: 3}
+  impactEffect: {fileID: 19800002, guid: 56bfc2f4b4a0c534c8ef3d0fd1124c44, type: 3}
   firePosition: {fileID: 1059501191}
 --- !u!1 &1059501191
 GameObject:

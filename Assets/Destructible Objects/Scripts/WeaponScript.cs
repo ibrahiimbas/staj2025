@@ -6,7 +6,8 @@ using UnityEngine;
 public class WeaponScript : MonoBehaviour
 {
     [SerializeField] private ParticleSystem muzzleFlash;
-    [SerializeField] private GameObject impactEffect;
+    [SerializeField] private GameObject impactHole;
+    [SerializeField] private ParticleSystem impactEffect;
     [SerializeField] private GameObject firePosition;
     private float cooldown = 1f;
 
@@ -29,11 +30,17 @@ public class WeaponScript : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(firePosition.transform.position, firePosition.transform.forward, out hit, 100))
         {
-            // Etki efekti
+            if (impactHole != null)
+            {
+                Quaternion rotation = Quaternion.FromToRotation(Vector3.up, hit.normal);
+                GameObject impact = Instantiate(impactHole, hit.point, rotation);
+                Destroy(impact, 4f);
+            }
             if (impactEffect != null)
             {
-                GameObject impact = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
-                Destroy(impact, 2f);
+                  impactEffect.transform.position = hit.point;
+                  impactEffect.transform.rotation = Quaternion.LookRotation(Vector3.up,hit.normal);
+                  impactEffect.Play();
             }
         }
     }
