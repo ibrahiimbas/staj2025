@@ -19145,11 +19145,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   muzzleFlash: {fileID: 1616493363}
-  explosion: {fileID: 19800002, guid: 3364c97de68d3a147af572d1c71c6455, type: 3}
   impactHole: {fileID: 5809683676877100639, guid: 9f0d3031df8b65c44a7063a69a233fdf, type: 3}
   impactEffect: {fileID: 19800002, guid: 56bfc2f4b4a0c534c8ef3d0fd1124c44, type: 3}
   firePosition: {fileID: 1059501191}
-  gasTank: {fileID: 1264639352}
+  destruction: {fileID: 1264639354}
 --- !u!1 &1059501191
 GameObject:
   m_ObjectHideFlags: 0
@@ -22955,9 +22954,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1264639353}
+  - component: {fileID: 1264639354}
   m_Layer: 0
   m_Name: GasTankFragments
-  m_TagString: Target
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23077,6 +23077,20 @@ Transform:
   - {fileID: 71163031}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1264639354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264639352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4398b5160e8455e469ba42c8bfa25488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gasTank: {fileID: 1264639352}
+  explosion: {fileID: 19800008, guid: 06736895ea0a4ff408d25e6684dce797, type: 3}
 --- !u!1 &1283276689
 GameObject:
   m_ObjectHideFlags: 0
